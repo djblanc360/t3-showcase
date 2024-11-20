@@ -1,10 +1,12 @@
 import "~/styles/globals.css";
+import "@uploadthing/react/styles.css";
 
 import { ClerkProvider } from '@clerk/nextjs';
 
 import { type Metadata } from "next";
 
 import { TopNav } from "./_components/topnav";
+
 
 export const metadata: Metadata = {
   title: "Midjourney Showcase",
