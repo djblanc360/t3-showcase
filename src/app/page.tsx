@@ -2,7 +2,7 @@ import { headers } from "next/headers";
 import { mock } from "node:test";
 import { db } from "~/server/db";
 
-export const runtime = "force-dynamic";
+export const dynamic = "force-dynamic";
 
 /*
 const mockUrls = [

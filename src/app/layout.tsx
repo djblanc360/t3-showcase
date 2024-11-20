@@ -1,5 +1,6 @@
 import "~/styles/globals.css";
 
+import { ClerkProvider } from '@clerk/nextjs';
 
 import { type Metadata } from "next";
 
@@ -23,11 +24,13 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
+    <ClerkProvider>
     <html lang="en" className={`flex flex-col gap-4`}>
       <body>
         <TopNav />
         {children}
       </body>
     </html>
+    </ClerkProvider>
   );
 }
