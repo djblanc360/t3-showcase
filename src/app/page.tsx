@@ -2,8 +2,12 @@ import Link from "next/link";
 import { mock } from "node:test";
 
 const mockUrls = [
-  "https://utfs.io/f/1SnDblWgyrve71vEpp5BdhCZkyxJvsQIAorm5bOYR6tWHSng",
-  "https://utfs.io/f/1SnDblWgyrveYlC2WpkZ8NahtuQHe1cwsBL7dF93xyfRWD0A"
+  "https://utfs.io/f/1SnDblWgyrves331B56wXrVIoRkMLDeiubqvBc4ZsgGSOdWN",
+  "https://utfs.io/f/1SnDblWgyrveHjSOH1KGarVDsgtbB7Eo4USAq3If8hiQ5ROH",
+  "https://utfs.io/f/1SnDblWgyrveOnYsna7equAI7tNJMr8W2Ho5XbcDk0jyEifG",
+  "https://utfs.io/f/1SnDblWgyrvezPlc6EfotXc0fDRupv847g6CPQMewJHk2ydi",
+  "https://utfs.io/f/1SnDblWgyrve0wj0d9Bo2Hzy8RIjCVln1reAmkhf3JX4YPWS",
+  "https://utfs.io/f/1SnDblWgyrvePlOftYvT04GRAQpinuj2wlvbk5aMgOXBhItq",
 ];
 
 const mockImages = mockUrls.map((url, index) => ({
