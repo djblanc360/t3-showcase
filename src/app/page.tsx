@@ -1,3 +1,4 @@
+import { SignedIn, SignedOut } from "@clerk/nextjs";
 import { headers } from "next/headers";
 import { mock } from "node:test";
 import { db } from "~/server/db";
@@ -19,21 +20,32 @@ const mockImages = mockUrls.map((url, index) => ({
 }));
 */
 
-export default async function HomePage() {
-  headers();
+async function Images() {
   const images= await db.query.images.findMany({
     orderBy: (model, { desc }) => [desc(model.id)], // by latest id
   });
+ return (
+  <div className="flex flex-wrap gap-4">
+    {images.map((image, index) => (
+      <div key={`${image.id}-${index}`} className="w-48 flex flex-col">
+        <img src={image.url}  className="" />
+        <p>{image.name}</p>
+      </div>
+    ))}
+  </div>
+ )
+}
+
+export default async function HomePage() {
+  headers();
   return (
     <main className="">
-      <div className="flex flex-wrap gap-4">
-        {images.map((image, index) => (
-          <div key={`${image.id}-${index}`} className="w-48 flex flex-col">
-            <img src={image.url}  className="" />
-            <p>{image.name}</p>
-          </div>
-        ))}
-      </div>
+      <SignedOut>
+        <div className="h-full w-full text-2xl text-center">Please sign in above</div>
+      </SignedOut>
+    <SignedIn>
+      <Images />
+    </SignedIn>
       
     </main>
   );
