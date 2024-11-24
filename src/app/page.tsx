@@ -29,7 +29,7 @@ async function Images() {
     {images.map((image) => (
       <div key={`${image.id}`} className="w-48 flex flex-col">
         <img src={image.url}  className="" />
-        <p>{image.name}</p>
+        {/* <p>{image.name}</p> */}
       </div>
     ))}
   </div>
