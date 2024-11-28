@@ -41,7 +41,7 @@ Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/ver
 - [X] "taint" (server-only)
 - [X] Use Next/Image component
 - [ ] Error management (w/ Senry)
-- [ ] Routing/image page (parallel route)
+- [X] Routing/image page (parallel route)
 - [ ] Delete button (w/ Server Actions)
 - [ ] Analytics (posthog)
 - [ ] Ratelimiting (upstash)
